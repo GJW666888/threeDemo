@@ -105,7 +105,7 @@ export default function Three() {
     renderer.setSize(width, height); //设置渲染区域尺寸
     renderer.setClearColor(0xb9d3ff, 1); //设置背景颜色
     threeRef.current.innerText = '';
-    document.body.appendChild(renderer.domElement); //body元素中插入canvas对象
+    threeRef.current.appendChild(renderer.domElement); //body元素中插入canvas对象
     //执行渲染操作   指定场景、相机作为参数
 
     // 渲染函数
