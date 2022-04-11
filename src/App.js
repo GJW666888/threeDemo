@@ -4,13 +4,15 @@ import './App.css';
 import Three1 from './page/three/three1';
 import Three2 from './page/three/three2';
 import Three3 from './page/three/three3';
+import Game3d from './page/three/game3d/index.js';
 import AntdPage from './page/antdPage/index.tsx';
 
 const pageEnum = {
   antd: 'antd',
   three1: 'three1',
   three2: 'three2',
-  three3: 'three3'
+  three3: 'three3',
+  game3d: 'game3d'
 };
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         return <Three2 />;
       case pageEnum.three3:
         return <Three3 />;
+      case pageEnum.game3d:
+        return <Game3d />;
     }
   }, [current]);
 
@@ -41,6 +45,7 @@ function App() {
         <Menu.Item key={pageEnum.three1}>{pageEnum.three1}</Menu.Item>
         <Menu.Item key={pageEnum.three2}>{pageEnum.three2}</Menu.Item>
         <Menu.Item key={pageEnum.three3}>{pageEnum.three3}</Menu.Item>
+        {/* <Menu.Item key={pageEnum.game3d}>{pageEnum.game3d}</Menu.Item> */}
       </Menu>
       {currentDom}
     </div>
